@@ -33,5 +33,16 @@ public class Stack {
         this.top  = newNode;
         this.size++;
     }
-
+    public int pop(){
+        int response = -1;
+        if(this.top != null){
+            response = this.top.getData();
+            this.top = this.top.getNext();
+            this.size--;
+        }
+        else{
+            System.out.println("Stack is Empty");
+        }
+        return response;
+    }
 }
